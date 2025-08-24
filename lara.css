@@ -1,0 +1,31 @@
+.areafoto {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#foto_eu {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    margin-top: 30px;
+    margin-left: 50px;
+    border-radius: 1rem;
+}
+
+.texto {
+    max-width: 500px;
+    margin-left: 50px;
+}
+
+#bebas {
+    font-family: 'Bebas Neue', sans-serif;
+    font-style: italic;
+    color: rgb(200, 22, 22);
+}
+
+#voltar {
+    text-align: center;
+    margin-top: 60px;
+    color: black;
+}

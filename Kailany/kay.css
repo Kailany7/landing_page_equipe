@@ -1,7 +1,7 @@
 :root {
   --text: #595554;
-  --background: #cccccc;
-  --primary: #e58638;
+  --background: #f0e8e3;
+  --primary: #9c6c44;
   --secondary: #ffaf75;
   --accent: #ffdfcc;
 }
@@ -13,7 +13,11 @@
 }
 
 body {
-    
+    padding-top: 70px; /* espaçamento para caber o header fixo */
+    line-height: 1.6;
+    background: var(--background);
+    color: var(--text);
+
 }
 
 header {
@@ -26,7 +30,6 @@ header {
   z-index: 1000;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-  
     
 }
 
@@ -55,5 +58,63 @@ header {
     color: var(--text);
 }
 
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+}
 
+h1, h2, h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.hero {
+
+  display: flex;
+  justify-content: center;       
+  align-items: center;          
+  text-align: center;            
+  min-height: 10vh;            
+  padding: 10rem;
+}
+
+.hero-container {
+  max-width: 800px;              /* Limita largura do texto */
+}
+
+/* Subtítulo */
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #8a8a8a;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.hero-title span {
+  color: #c6a998;                /* Destaque colorido no sobrenome */
+}
+
+/* Descrição */
+.hero-texto p {
+  font-size: 1.1rem;
+  color: #8a8a8a;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
 

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 :root {
-  --text: #595554;
+  --text: #8a8a8a;
   --background: #eaeaea;
   --primary: #9c6c44;
   --secondary: #e1a072;
@@ -95,7 +95,6 @@ h1{
 
 .hero-subtitle {
   font-size: 1.2rem;
-  color: #8a8a8a;
   letter-spacing: 2px;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -116,8 +115,26 @@ h1{
 /* Descrição */
 .hero-texto p {
   font-size: 1.1rem;
-  color: #8a8a8a;
   line-height: 1.6;
   margin-bottom: 2rem;
 }
+
+/****************SOBRE MIM*************************/
+
+.sobre-mim  {
+    text-align: center;
+    padding: 2rem;
+    background: var(--accent);
+    border-radius: 50px; 
+
+}
+
+.sobre-mim p{
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.1rem;
+
+}
+
+
 

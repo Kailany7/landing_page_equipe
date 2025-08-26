@@ -4,33 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>LETICIA | PORTIFOLIO</title>
 </head>
 
 <body>
-    <nav class="" navegacao">
+    <nav class=" navegacao">
         <ul class="menu">
             <li>
-                <a href="#inicio">INÍCIO</a>
+                <a href="#inicio" class="menu-link">INÍCIO</a>
             </li>
             <li>
-                <a href="#sobre">SOBRE</a>
+                <a href="#sobre" class="menu-link">SOBRE</a>
             </li>
             <li>
-                <a href="#projetos">PROJETOS</a>
+                <a href="#projetos" class="menu-link">PROJETOS</a>
             </li>
             <li>
-                <a href="#contatos">CONTATOS</a>
+                <a href="#contatos" class="menu-link">CONTATOS</a>
             </li>
         </ul>
 
     </nav>
     <main id="inicio" class="cabecalho">
-        <div>
-            <img src="imagem/leticia.jpg" alt="Foto de Letícia Gabrielly" class="foto-perfil">
-            <h1>Letícia Gabrielly</h1>
-            <p>Desenvolvedora Web</p>
-        </div>
+        <img src="imagem/perfil.png" alt="Foto de Letícia Gabrielly" class="foto-perfil">
+        <h1>Letícia Gabrielly</h1>
+        <p class="cab-subt">Estudande de Sistemas da Informação</p>
+
     </main>
 
     <section id="sobre" class="sobre">
@@ -48,13 +48,21 @@
         <h2 class="projetos-titulos">MEUS PROJETOS</h2>
         <div class="projetos-caixa">
             <div class="projetos-card">
-                <img src="imagem/pipae.jpg" alt="Foto PIPAE" class="projetos-imagem">
+                <img src="imagem/pipae.png" alt="Foto PIPAE" class="projetos-imagem">
                 <h3 class="" info-projetos">PIPAE - Painel Interativo para Autistas na Educação</h3>
                 <p class="paragrafo-projetos">PIPAE – Transformando a educação de alunos autistas com tecnologia,
                     promovendo inclusão e autonomia de forma inovadora.</p>
             </div>
             <div class="projetos-card">
-                <img src="imagem/techconect.png" alt="Foto site techconect" class="projetos-imagem">
+                <img src="imagem/turistei.png" alt="Foto App Turistei" class="projetos-imagem">
+                <h3 class=" info-projetos">Turistei</h3>
+                <p class="paragrafo-projetos">Turistei – Aplicativo criado para facilitar o turismo local, reunindo
+                    informações sobre pontos turísticos, roteiros, dicas de viagem e experiências culturais. O projeto
+                    foi desenvolvido com foco em oferecer uma navegação prática, moderna e interativa para viajantes.
+                </p>
+            </div>
+            <div class="projetos-card">
+                <img src="imagem/techconecect.png" alt="Foto site techconect" class="projetos-imagem">
                 <h3 class="" info-projetos">TechConnect | Conectando ideias, criando o futuro!</h3>
                 <p class="paragrafo-projetos">TechConnect 2025 – Site criado para divulgar um evento de inovação
                     tecnológica na América Latina, com informações sobre programação, palestrantes, atividades e
@@ -62,20 +70,13 @@
             </div>
             <div class="projetos-card">
                 <img src="imagem/" alt="Foto site Centelhas do Cristo" class="projetos-imagem">
-                <h3 class="" info-projetos">Centelhas do Cristo</h3>
+                <h3 class=" info-projetos">Centelhas do Cristo</h3>
                 <p class="paragrafo-projetos">Centelhas – Site desenvolvido para apoiar a ação social de doação de
                     marmitas. O projeto apresenta informações sobre a iniciativa, formas de contribuição e impacto das
                     doações, oferecendo uma experiência simples, moderna e acessível para incentivar a solidariedade.
                 </p>
             </div>
-            <div class="projetos-card">
-                <img src="imagem/turistei.png" alt="Foto App Turistei" class="projetos-imagem">
-                <h3 class="" info-projetos">Turistei</h3>
-                <p class="paragrafo-projetos">Turistei – Aplicativo criado para facilitar o turismo local, reunindo
-                    informações sobre pontos turísticos, roteiros, dicas de viagem e experiências culturais. O projeto
-                    foi desenvolvido com foco em oferecer uma navegação prática, moderna e interativa para viajantes.
-                </p>
-            </div>
+
         </div>
     </section>
     <section id="contatos" class="contatos">
@@ -84,8 +85,8 @@
             <div class="grupo-form">
                 <input placeholder="Nome" class="nome=form">
             </div>
-            <div  class="grupo-form">
-                <textarea class="text-form"placeholder="Digite sua mensagem"></textarea>
+            <div class="grupo-form">
+                <textarea class="text-form" placeholder="Digite sua mensagem"></textarea>
             </div>
         </form>
     </section>

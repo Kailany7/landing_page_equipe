@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+
+    --primaria: #58A6FF;
+    --secundaria: #C678DD;
+    --escuro: #0D1117;
+    --maisEscuro: #010409;
+    --claro: #E6EDF3;
+    --vidro: rgba(255, 255, 255, 0.06);
+}
+
+
+body {
+    background-color: var(--escuro);
+    color: var(--claro);
+}
+
+.navegacao {
+    top: 0;
+    position: fixed;
+    background: var(--maisEscuro);
+    width: 100%;
+    z-index: 100;
+    padding: 1.2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 3rem;
+
+}
+
+.menu-link {
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.menu-link::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    transition: width 0.5s ease;
+}
+
+.menu-link:hover::after {
+    width: 100%;
+}
+
+.cabecalho {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.foto-perfil {
+    width: 300px;
+    height: 350px;
+    box-shadow: 0 0 25px var(--vidro);
+    background: radial-gradient(circle,rgba(88, 166, 255, 0.15) 0%, transparent 70%);
+    border-radius: 10%;
+    border: 2px solid var(--vidro);
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: var(--claro);
+    font-weight: bold;
+    margin: 20px;
+}
+
+.cab-subt {
+    font-size: 1.5rem;
+    color: var(--claro);
+}
+
+.sobre {
+    padding: 6rem 2rem;
+}
+
+.sobre-titulo {
+    font-size: 3rem;
+    color: var(--claro);
+    text-align: center;
+    margin-bottom:  20px;
+}
+
+.sobre-caixa {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 16px;
+  border: 1px solid var(--vidro);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.03); /* vidro translúcido */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* sombra suave */
+}
+
+
+.sobre-paragrafo {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.projetos{
+
+}
+.projetos-titulo{
+
+}
+.projeto-caixa{
+
+}
+.projetos-imagem{
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.info-projetos{
+
+}
+.paragrafo-projetos{
+
+}

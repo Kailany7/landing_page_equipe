@@ -123,9 +123,11 @@ h1{
 
 .sobre-mim  {
     text-align: center;
-    padding: 2rem;
+    padding: 5rem;
+    margin: 10rem;
     background: var(--accent);
     border-radius: 50px; 
+    border-top: 6px solid var(--primary);
 
 }
 
@@ -136,5 +138,33 @@ h1{
 
 }
 
+/***************cards das tecnologias e metodologias*****************/
 
+.skills {
+    padding: 5rem ;
+    margin: 10rem;
+    background-color: #ffc5a3;
+    border-top: 6px solid var(--primary);
+    border-radius: 50px;
 
+    text-align: center;
+
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.card {
+    background: var(--background);
+    border: 2px solid var(--secondary);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    border-top: 6px solid var(--primary);
+
+}

@@ -1,5 +1,17 @@
-* {
+body {
     background-color: rgb(215, 202, 255);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 4px 450px;
+    background-color: rgb(200, 22, 22);
+    border-radius: 20px;
+    flex-direction: row;
+    font-family: 'Clash Grotesk', sans-serif;
+    
 }
 
 .areafoto {

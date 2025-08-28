@@ -1,8 +1,12 @@
+@import url(https://api.fontshare.com/v2/css?f[]=clash-display@500&display=swap);
+@import url(https://api.fontshare.com/v2/css?f[]=author@400&display=swap);
+
 body {
     background-color: rgb(215, 202, 255);
 }
 
 nav {
+    text-decoration: none;
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -10,8 +14,28 @@ nav {
     background-color: rgb(200, 22, 22);
     border-radius: 20px;
     flex-direction: row;
-    font-family: 'Clash Grotesk', sans-serif;
-    
+    font-family: 'Clash Dsiplay', sans-serif;
+}
+
+.hyper {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    padding: 0.5rem;
+}
+
+.hyper::after {
+    content: '';
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient( 90deg, black);
+    transition: width 0.5s ease;
+}
+
+.hyper:hover::after {
+    width: 100%;
 }
 
 .areafoto {
@@ -22,6 +46,14 @@ nav {
 
 .nome {
     font-family: 'Clash Grotesk', sans-serif;
+}
+
+.destaque {
+    font-family: 'Clash Grotesk', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    color: #c81616;
 }
 
 #foto_eu {
@@ -42,6 +74,43 @@ nav {
     text-align: justify;
 }
 
+hr {
+    border: none;                
+    border-top: 2px solid #c81616; 
+    margin: 40px auto;           
+    width: 80%;                  
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.projetos {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 50px;
+}
+
+.projeto-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.projeto-item .texto-projeto {
+    max-width: 500px;
+    text-align: justify;
+}
+
+.caixapreta, .techconnect-lara {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border: 2px solid #c81616;
+}
+
+
 #clash, .nome {
     font-family: 'Clash Display', sans-serif;
     color: rgb(200, 22, 22);
@@ -50,6 +119,9 @@ nav {
 #voltar {
     text-align: center;
     margin-top: 60px;
+    font-family: 'Clash Display', sans-serif;
+    text-decoration: none;
+    color: white;
 }
 
 li, p {

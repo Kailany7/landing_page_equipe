@@ -151,10 +151,9 @@ h1{
 }
 
 .cards {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /*responsividade */
     gap: 2rem;
-    flex-wrap: wrap;
     margin-top: 2rem;
 }
 
@@ -165,7 +164,13 @@ h1{
     padding: 2rem;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     border-top: 6px solid var(--primary);
+    transition: transform 0.3s ease, box-shadow 0.2 eases; /* Utilizando animação  */
 
+}
+
+.card:hover {
+    transform: translateY(-8px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
 }
 
 /********* sessão experiencia e projetos ***********/
@@ -180,31 +185,48 @@ h1{
 
 }
 
-.cards-projeto {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-top: 2rem;
+.cards-projetos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem; 
+    margin-top: 3rem;
 }
 
 .card-projeto {
     background: var(--background);
     border: 2px solid var(--secondary);
     border-radius: 20px;
-    padding: 2rem;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     border-top: 6px solid var(--primary);
-    max-width: 300px; /* Limita a largura máxima do card */
-    text-align: center; /* Centraliza o texto dentro do card */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.2 ease;
+}
+
+.card-projeto:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .card-img {
-  height: 200px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin-top: 1rem;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    cursor: pointer;  
+    transition: transform 0.3s ease;
+}
+
+.card-img img:hover {
+    transform: scale(1.05); /* zoom suave no hover */
 }
 
 .card-content {
@@ -212,6 +234,7 @@ h1{
     display: flex;
     flex-direction: column;
     gap:0.8rem;
+    flex-grow: 1; /* Faz o conteúdo crescer para preencher o espaço disponível */
 }
 
 .card-content p {
@@ -248,5 +271,28 @@ h1{
     font-weight: bold;
     margin-top: auto; /* Empurra o link para o final do card */
     align-self: flex-start; /* Alinha o link à esquerda */
+}
+
+/********* Responsividade ***********/
+
+@media (max-width: 768px)  {
+
+    /* Deixa as seções se comportar melhor em telas menores */
+    .skills, .sobre-mim, .projetos {
+        margin: 3rem 1rem;
+        padding: 2rem;
+    }
+
+
+
+    .hero {
+        padding: 5rem 1rem;
+    }
+
+    .cards-projetos{ 
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas médias */
+
+    }
+
 }
 

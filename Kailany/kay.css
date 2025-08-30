@@ -83,8 +83,7 @@ h1{
   display: flex;
   justify-content: center;       
   align-items: center;          
-  text-align: center;            
-  min-height: 10vh;            
+  text-align: center;                     
   padding: 10rem;
 }
 
@@ -196,17 +195,12 @@ h1{
     background: var(--background);
     border: 2px solid var(--secondary);
     border-radius: 20px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     border-top: 6px solid var(--primary);
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.2 ease;
 }
 
-.card-projeto:hover {
-    transform: translateY(-8px); 
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
 
 .card-img {
     display: flex;
@@ -238,13 +232,14 @@ h1{
 }
 
 .card-content p {
-    text-align: justify; 
-    font-size: 0.95rem;
+    text-align: center; 
+    flex-grow: 1; 
+
     
 }
 
 .categoria {
-    font-size: 0.75rem;
+    font-size: 2rem;
     color: var(--secondary);
     text-transform: uppercase; /* Deixa o texto em maiúsculas */
     letter-spacing: 1px; /* Espaçamento entre letras */ 
@@ -252,9 +247,10 @@ h1{
 
 .tags {
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
     flex-wrap: wrap;
     margin-top: 0.5rem;
+    
 }
 
 .tags span {
@@ -262,7 +258,7 @@ h1{
     color: white;
     padding: 0.3rem 0.6rem;
     border-radius: 20px;
-    font-size: 0.75rem;
+    font-size: 1rem;
 }
 
 .link-projeto {
@@ -275,7 +271,7 @@ h1{
 
 /********* Responsividade ***********/
 
-@media (max-width: 768px)  {
+@media screen and (min-width:1200px ) and (max-width: 768px)  {
 
     /* Deixa as seções se comportar melhor em telas menores */
     .skills, .sobre-mim, .projetos {
@@ -289,10 +285,7 @@ h1{
         padding: 5rem 1rem;
     }
 
-    .cards-projetos{ 
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas médias */
-
-    }
-
 }
+
+
 

@@ -97,20 +97,20 @@ li {
  }
 
  .informações {
-    padding: 1rem;
+    padding: 1em;
  }
 
  .title-tech{
     color: #f9bbbb;
     font-size: 1rem;
-    padding: ;
+    margin-bottom: 10px;
     
  }
 
 .tecnologias {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 10px;
 }
 
 .tech {

@@ -124,3 +124,10 @@ button {
     text-decoration: none;
     
 }
+
+dialog {
+    border: none;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 800px;
+}

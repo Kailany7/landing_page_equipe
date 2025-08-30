@@ -74,6 +74,16 @@ nav {
     text-align: justify;
 }
 
+#links-projetos {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+#links-projetos:hover {
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+}
+
 hr {
     border: none;                
     border-top: 2px solid #c81616; 
@@ -110,18 +120,13 @@ hr {
     border: 2px solid #c81616;
 }
 
+#espaco {
+    margin-bottom: 40px;
+}
 
 #clash, .nome {
     font-family: 'Clash Display', sans-serif;
     color: rgb(200, 22, 22);
-}
-
-#voltar {
-    text-align: center;
-    margin-top: 60px;
-    font-family: 'Clash Display', sans-serif;
-    text-decoration: none;
-    color: white;
 }
 
 li, p {

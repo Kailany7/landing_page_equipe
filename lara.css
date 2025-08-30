@@ -10,7 +10,7 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 4px 450px;
-    background-color: rgb(200, 22, 22);
+    background-color: #c81616;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     flex-direction: row;
@@ -126,4 +126,27 @@ hr {
 
 li, p {
     font-family: 'Author', sans-serif;
+}
+
+footer {
+    background-color: white;
+    opacity: 50%;
+    padding: 10px 10px;
+    justify-content: center;
+    position: static;
+    text-align: center;
+}
+
+.rodape ul {
+    list-style: none;
+}
+
+.rodape a {
+    text-decoration: none;
+    color: black;
+}
+
+.rodape a:hover {
+    text-decoration: underline;
+    color: rgb(43, 0, 255);
 }

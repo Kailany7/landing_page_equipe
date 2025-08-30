@@ -53,7 +53,7 @@ li {
  }
 
  .card {
-    border: 1px solid #ccc;
+    border: 1px solid #ee8080; /*ajustar de acordo com a paleta de cores*/
     border-radius: 12px;
     overflow: hidden;
     background: #fff;
@@ -63,13 +63,29 @@ li {
  
  }
 
- .card .topo {
+ .topo-lara{
+    background: linear-gradient(135deg, #c81616, #ff4d4d, #fb7f7f74);
     display: flex;
     align-items: center;
     gap:10px;
     padding: 1rem;
-    border-bottom: 1px solid #eee;
-    background: #f8f8f8; 
+
+ }
+
+ .topo-kailany{
+    background: linear-gradient(135deg, #ff985d, #ff985d94,#ff985d52 );
+    display: flex;
+    align-items: center;
+    gap:10px;
+    padding: 1rem;
+ }
+
+ .topo-leticia{
+    background: linear-gradient(135deg, #2e7d7c, #43bab6ad, #5cfffa);
+    display: flex;
+    align-items: center;
+    gap:10px;
+    padding: 1rem;
  }
 
  .foto {

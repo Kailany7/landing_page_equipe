@@ -9,10 +9,10 @@ nav {
     text-decoration: none;
     display: flex;
     justify-content: space-between;
-    align-items: end;
     padding: 4px 450px;
     background-color: rgb(200, 22, 22);
-    border-radius: 20px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
     flex-direction: row;
     font-family: 'Clash Dsiplay', sans-serif;
 }

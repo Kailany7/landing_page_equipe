@@ -25,7 +25,7 @@ body {
     justify-content: center;
 }
 
-.barra-inicial li {
+li {
     display: flex;
     justify-content: space-between;
     padding: 4px 45px;
@@ -34,4 +34,102 @@ body {
 #barra-link {
     text-decoration: none;
     color: rgb(0, 0, 0);
+}
+
+/******************* perfis *******************/
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+ .title {
+    margin-bottom: 20px;
+ }
+
+ .perfis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+ }
+
+ .card {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra para profundidade */
+ 
+ }
+
+ .card .topo {
+    display: flex;
+    align-items: center;
+    gap:10px;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    background: #f8f8f8; 
+ }
+
+ .foto {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+ }
+
+ .informações {
+    padding: 1rem;
+ }
+
+ .title-tech{
+    color: #f9bbbb;
+    font-size: 1rem;
+    padding: ;
+    
+ }
+
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tech {
+    background: #f0f0f0;
+    border-radius: 999px;
+    padding: 4px 8px;
+    font-size: 0.85rem;
+   
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-top: 1px solid #eee;
+}
+
+button {
+    background: #7c5cff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.portfolio {
+    color:#f9bbbb;
+    text-decoration: none;
+    
+}
+
+dialog {
+    border: none;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 800px;
 }

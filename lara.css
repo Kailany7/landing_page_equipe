@@ -48,14 +48,6 @@ nav {
     font-family: 'Clash Grotesk', sans-serif;
 }
 
-.destaque {
-    font-family: 'Clash Grotesk', sans-serif;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 60px;
-    color: #c81616;
-}
-
 #foto_eu {
     width: 250px;
     height: 350px;
@@ -75,7 +67,6 @@ nav {
 }
 
 #links-projetos {
-    text-decoration: none;
     color: rgb(0, 0, 0);
 }
 
@@ -91,6 +82,13 @@ hr {
     width: 80%;                  
     margin-top: 60px;
     margin-bottom: 60px;
+}
+
+.destaque {
+    font-family: 'Clash Display', sans-serif;
+    text-align: center;
+    color: #c81616;
+    margin-top: 60px;
 }
 
 .projetos {

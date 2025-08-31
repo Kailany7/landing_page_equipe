@@ -1,0 +1,323 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primaria: #3b82f6;
+  --secundaria: #22d3ee;
+  --claro: #f8fafc;
+  --escuro: #334155;
+  --maisEscuro: #1e293b;
+  --vidro: rgba(255, 255, 255, 0.65);
+  --fundo: #e2e8f0;
+}
+
+hr {
+  border: none;
+  border-top: 2px dashed #9a5bff;
+  width: 100%;
+  opacity: 0.4;
+}
+
+body {
+  background-color: var(--claro);
+  color: var(--escuro);
+  line-height: 1.6;
+}
+
+/* Navegação */
+.navegacao {
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: var(--vidro);
+  width: 100%;
+  z-index: 100;
+  padding: 1.2rem 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 3rem;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: var(--escuro);
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.4s ease, color 0.4s ease;
+}
+
+.menu-link::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+  transition: width 0.5s ease;
+}
+
+.menu-link:hover {
+  color: var(--primaria);
+}
+
+.menu-link:hover::after {
+  width: 100%;
+}
+
+/* Cabeçalho */
+.cabecalho {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background: var(--claro);
+  padding: 2rem 2rem 4rem;
+}
+
+.foto-perfil {
+  width: 300px;
+  height: 300px;
+  border: 4px solid var(--primaria);
+  object-fit: cover;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.foto-perfil:hover {
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primaria);
+  margin: 20px 0 10px;
+  letter-spacing: 1px;
+}
+
+.cab-subt {
+  font-size: 1.3rem;
+  opacity: 0.85;
+}
+
+/* Sobre */
+.sobre {
+  padding: 6rem 2rem;
+  background: var(--fundo);
+}
+
+.sobre-titulo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color: var(--primaria);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sobre-caixa {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 16px;
+  background: var(--vidro);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.sobre-caixa:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+.sobre-caixa p {
+  text-align: center;
+  font-size: 1.15rem;
+}
+
+/* Projetos */
+.projetos {
+  padding: 6rem 2rem;
+}
+
+.projetos-titulo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color: var(--primaria);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.projetos-caixa {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projetos-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  text-align: center;
+
+  /* NOVO: flex layout vertical para alinhar botão */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.projetos-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+}
+
+.projetos-imagem {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+  transition: transform 0.5s ease;
+}
+
+.projetos-imagem:hover {
+  transform: scale(1.05) rotate(-1deg);
+}
+
+.info-projetos {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: var(--escuro);
+  margin: 1rem 0;
+  font-weight: 600;
+
+  /* NOVO: permite crescer e empurra o botão para baixo */
+  flex-grow: 1;
+}
+
+/* Botão Saiba mais nos projetos */
+.btn-projeto {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(90deg, var(--escuro), var(--primaria));
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+
+  /* NOVO: centraliza horizontalmente */
+  align-self: center;
+}
+
+.btn-projeto:hover {
+  transform: translateY(-2px);
+  background: var(--secundaria);
+  color: var(--maisEscuro);
+}
+
+/* Contatos */
+.contatos {
+  padding: 8rem 2rem;
+  background: var(--fundo);
+}
+
+.contatos-titulo {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primaria);
+  margin-bottom: 2rem;
+}
+
+.formulario-contato {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.grupo-form label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.grupo-form input,
+.grupo-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(76, 110, 245, 0.3);
+  background: rgba(255, 255, 255, 0.9);
+  font-family: 'Inter', sans-serif;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.grupo-form input:focus,
+.grupo-form textarea:focus {
+  border-color: var(--primaria);
+  box-shadow: 0 0 15px rgba(76, 110, 245, 0.3);
+}
+
+/* Botão */
+.btn-enviar {
+  background: linear-gradient(90deg, var(--escuro), var(--primaria));
+  color: #fff;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.btn-enviar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(79, 70, 229, 0.3);
+}
+
+/* Rodapé - suavizado com toque moderno */
+.rodape {
+  background: linear-gradient(90deg, var(--escuro), var(--maisEscuro));
+  color: #e0e7ff;
+  text-align: center;
+  padding: 0.3rem 0.3rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

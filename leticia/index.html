@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio | Letícia Gabrielly</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- Navegação -->
+  <header>
+    <nav class="navegacao" aria-label="Menu principal">
+      <ul class="menu">
+        <li><a href="#inicio" class="menu-link">Início</a></li>
+        <li><a href="#sobre" class="menu-link">Sobre</a></li>
+        <li><a href="#projetos" class="menu-link">Projetos</a></li>
+        <li><a href="#contatos" class="menu-link">Contatos</a></li>
+      </ul>
+    </nav>
+  </header>
+  <hr>
+  <!-- Cabeçalho -->
+  <main id="inicio" class="cabecalho">
+    <img src="imagem/perfil.png" alt="Foto de Letícia Gabrielly" class="foto-perfil">
+    <h1 class="titulo-principal">Letícia Gabrielly</h1>
+    <p class="cab-subt">Estudante de Sistemas da Informação</p>
+  </main>
+  <hr>
+  <!-- Sobre -->
+  <section id="sobre" class="sobre">
+    <h2 class="sobre-titulo">SOBRE MIM</h2>
+    <div class="sobre-caixa">
+      <p>
+        Sou Letícia Gabrielly, estudante de Sistemas de Informação, com foco em desenvolvimento em Java, HTML e CSS.
+        Tenho projetos que combinam tecnologia e comunicação alternativa, voltados para acessibilidade e inclusão.
+        Estou sempre em busca de novos desafios para aprimorar minhas habilidades e criar impacto positivo através da
+        tecnologia.
+      </p>
+    </div>
+  </section>
+  <hr>
+  <!-- Projetos -->
+  <section id="projetos" class="projetos">
+    <h2 class="projetos-titulo">MEUS PROJETOS</h2>
+    <div class="projetos-caixa">
+
+      <article class="projetos-card">
+        <img src="imagem/turistei.png" alt="Aplicativo Turistei" class="projetos-imagem">
+        <h3 class="info-projetos">Turistei</h3>
+        <p>Aplicativo criado para facilitar o turismo local, reunindo informações sobre pontos turísticos, roteiros e
+          experiências culturais.</p>
+        <a href="https://www.figma.com/design/prRZ2gbMjCRtxFMDw8yBdW/prototipo---turistei?node-id=0-1&t=OMhnaxAZYxv0Cdur-1"
+          class="btn-projeto" target="_blank">Saiba mais</a>
+      </article>
+
+      <article class="projetos-card">
+        <img src="imagem/pipae1.png" alt="Projeto PIPAE" class="projetos-imagem">
+        <h3 class="info-projetos">PIPAE</h3>
+        <p>Painel interativo para autistas na educação, promovendo inclusão e autonomia de forma inovadora.</p>
+        <a href="https://youtu.be/htwOFEdlvs8?si=LVj-Le28uLS5DtiH" class="btn-projeto" target="_blank">Saiba mais</a>
+      </article>
+
+      <article class="projetos-card">
+        <img src="imagem/techconecect..png" alt="Site TechConnect" class="projetos-imagem">
+        <h3 class="info-projetos">TechConnect</h3>
+        <p>Site criado para divulgar um evento de inovação tecnológica na América Latina, com programação, palestrantes
+          e inscrições.</p>
+        <a href="https://github.com/LetGabs/TechConect" class="btn-projeto" target="_blank">Saiba mais</a>
+      </article>
+
+
+      <article class="projetos-card">
+        <img src="imagem/centelhas.png" alt="Site Centelhas do Cristo" class="projetos-imagem">
+        <h3 class="info-projetos">Centelhas do Cristo</h3>
+        <p>Site desenvolvido para apoiar uma ação social de doação de marmitas, incentivando solidariedade e
+          participação.</p>
+        <a href="https://centelhas-do-cristo.vercel.app/" class="btn-projeto" target="_blank">Saiba mais</a>
+      </article>
+
+    </div>
+  </section>
+
+  </section>
+  <hr>
+  <!-- Contatos -->
+  <section id="contatos" class="contatos">
+    <h2 class="contatos-titulo">Contatos</h2>
+    <form class="formulario-contato" id="formulario">
+      <div class="grupo-form">
+        <label for="nome">Nome</label>
+        <input id="nome" name="nome" type="text" placeholder="Digite seu nome" required>
+      </div>
+      <div class="grupo-form">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="Digite seu email" required>
+      </div>
+      <div class="grupo-form">
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+      </div>
+      <button type="submit" class="btn-enviar">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    &copy; 2025 Letícia Gabrielly. Todos os direitos reservados.
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

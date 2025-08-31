@@ -2,14 +2,17 @@
 const modal = document.getElementById("bioModal"); 
 const bioTitle = document.getElementById("bioTitle");
 const bioText = document.getElementById("bioText");
+const hero = document.querySelector(".modal-hero");
 const closeBtn = document.getElementById("bioClose");
 
 const openButtons = document.querySelectorAll(".open-bio");
 
+
+//interação do "ler bio"
 openButtons.forEach(button => {
     button.addEventListener("click", (e) => {
         const card = e.target.closest(".card");
-        const name = card.dataset.nome; 
+        const name = card.dataset.name; 
         const bio = card.dataset.bio;
 
         bioTitle.textContent = name; 

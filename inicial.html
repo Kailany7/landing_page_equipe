@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="inical.css">
-    <title>PÁGINA INICIAL ! Portifólio</title>
+    <title>PÁGINA INICIAL | Portfólio</title>
 </head>
 
 <body>
 
+    <!-- ===== HEADER ===== -->
     <header>
         <nav>
             <ul id="inicio" class="barra-inicial">
@@ -21,7 +22,10 @@
         </nav>
     </header>
 
+    <!-- ===== MAIN ===== -->
     <main>
+
+        <!-- HERO -->
         <section id="hero" class="hero-section">
             <div class="container">
                 <img src="assets/LOGO.jpg" alt="Logo Tecnologia em Trio" class="hero-logo" />
@@ -35,7 +39,7 @@
             </div>
         </section>
 
-
+        <!-- EQUIPE -->
         <section>
             <div class="container">
                 <div class="title">
@@ -43,21 +47,20 @@
                 </div>
 
                 <div class="perfis">
-                    <!--Integração com JS (data) são atributos personalizados para ser chamdos no JS -->
+
+                    <!-- Lara -->
                     <article class="card" data-name="Lara Raffaelly"
                         data-bio="Estudante de Sistemas de Informação e Arte e Mídia, buscando crescer em FRONT-END e unir no trabalho minhas duas áreas de estudo.">
 
-                        <!--Aqui fica o topo dos cads com a foto, nome-->
                         <div class="topo-lara">
                             <img src="/assets/Lara.jpg" alt="Lara Raffaelly" class="foto">
                             <strong>Lara Raffaelly</strong>
                         </div>
 
-                        <!--Parte do corpo do card -->
                         <div class="informações">
-                            <p>19 anos - Sistema de Informação </p>
+                            <p>19 anos - Sistema de Informação</p>
                             <br>
-                            <p class="title-tech"> Tecnologias Favoritas:</p>
+                            <p class="title-tech">Tecnologias Favoritas:</p>
                             <div class="tecnologias">
                                 <span class="tech"><img
                                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
@@ -77,28 +80,25 @@
                             </div>
                         </div>
 
-                        <!--Rodaapé do card   -->
                         <div class="rodape">
                             <button class="btn open-bio">Ler bio</button>
-                            <a class="portfolio" href="lara/lara.html">Portfólio</a> <!--COLOCAR O LINK CERTO-->
+                            <a class="portfolio" href="lara/lara.html">Portfólio</a>
                         </div>
                     </article>
 
-                    <!--Kailany-->
+                    <!-- Kailany -->
                     <article class="card" data-name="Kailany Silva"
-                        data-bio=" 2 anos de imersão no mundo da tecnologia, desenvolvi paixão por programação e pelo universo da gestão e das metodologias ágis, que tornam processos mais eficientese colaborativos.">
+                        data-bio="2 anos de imersão no mundo da tecnologia, desenvolvi paixão por programação e pelo universo da gestão e das metodologias ágis, que tornam processos mais eficientes e colaborativos.">
 
                         <div class="topo-kailany">
                             <img src="/assets/Kailany.jpg" alt="Kailany Silva" class="foto">
-                            <div>
-                                <strong>Kailany Silva</strong>
-                            </div>
+                            <strong>Kailany Silva</strong>
                         </div>
 
                         <div class="informações">
                             <p>23 anos - Sistema de Informação</p>
                             <br>
-                            <p class="title-tech"> Tecnologias Favoritas: </p>
+                            <p class="title-tech">Tecnologias Favoritas:</p>
                             <div class="tecnologias">
                                 <span class="tech"><img
                                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
@@ -116,26 +116,24 @@
                         </div>
 
                         <div class="rodape">
-                            <button class="btn open-bio"> Ler bio</button>
-                            <a class="portfolio" href="kailany.html">Portfólio</a> <!--COLOCAR LINK CERTO-->
+                            <button class="btn open-bio">Ler bio</button>
+                            <a class="portfolio" href="kailany.html">Portfólio</a>
                         </div>
                     </article>
 
-                    <!--Leticia-->
+                    <!-- Leticia -->
                     <article class="card" data-name="Leticia Gabrielly"
                         data-bio="Sou apaixonada por tecnologia e pesquisa desde cedo. No ensino médio participei de robótica e, atualmente, como estudante de Sistemas de Informação, desenvolvo projetos tecnológicos inovadores, incluindo soluções em comunicação alternativa, sempre buscando unir criatividade, eficiência e impacto social.">
 
                         <div class="topo-leticia">
                             <img src="assets/leticia.jpg" alt="Leticia Gabrielly" class="foto">
-                            <div>
-                                <strong>Leticia Gabriely</strong>
-                            </div>
+                            <strong>Leticia Gabrielly</strong>
                         </div>
 
                         <div class="informações">
-                            <p>20 anos - Sistema de Informação </p>
+                            <p>20 anos - Sistema de Informação</p>
                             <br>
-                            <p class="title-tech"> Tecnologias Favoritas: </p>
+                            <p class="title-tech">Tecnologias Favoritas:</p>
                             <div class="tecnologias">
                                 <span class="tech"><img
                                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
@@ -156,8 +154,8 @@
                         </div>
 
                         <div class="rodape">
-                            <button class="btn open-bio"> Ler bio</button>
-                            <a class="portfolio" href="leticia/index.html">Portfólio</a> <!--COLOCAR LINK CERTO-->
+                            <button class="btn open-bio">Ler bio</button>
+                            <a class="portfolio" href="leticia/index.html">Portfólio</a>
                         </div>
                     </article>
 
@@ -165,46 +163,49 @@
             </div>
         </section>
 
-                       <!-- Modal para mostrar a bio ao clicar -->
+        <!-- MODAL -->
         <dialog id="bioModal">
             <div class="modal-hero">
                 <h3 id="bioTitle"></h3>
             </div>
             <p id="bioText"></p>
-
             <button id="bioClose">Fechar</button>
-
         </dialog>
 
-
+        <!-- GALERIA -->
         <section>
-        <div class="title">
-            <h2>GALERIA</h2>
-        </div>
-        <div id="galeria" class="carousel">
-            <button class="carousel-btn prev">&#10094;</button>
-            <div class="carousel-track-container">
-                <ul class="carousel-track">
-                    <li class="carousel-slide current-slide"><img src="assets/EV.jpg" alt="Foto no mulher tech"></li>
-                    <li class="carousel-slide"><img src="assets/KLL.jpg" alt="Foto trio"></li>
-                    <li class="carousel-slide"><img src="assets/Kailany.jpg" alt="Foto Kailany"></li>
-                    <li class="carousel-slide"><img src="assets/Lara.jpg" alt="Foto Lara"></li>
-                    <li class="carousel-slide"><img src="assets/leticia.jpg" alt="Foto Letícia"></li>
-                </ul>
+            <div class="title">
+                <h2>GALERIA</h2>
             </div>
-            <button class="carousel-btn next">&#10095;</button>
-        </div>
+            <div id="galeria" class="carousel">
+                <button class="carousel-btn prev">&#10094;</button>
+                <div class="carousel-track-container">
+                    <ul class="carousel-track">
+                        <li class="carousel-slide current-slide"><img src="assets/EV.jpg" alt="Foto no mulher tech"> </li>
+                        <li class="carousel-slide"><img src="assets/KLL.jpg" alt="Foto trio"></li>
+                        <li class="carousel-slide"><img src="assets/Kailany.jpg" alt="Foto Kailany"></li>
+                        <li class="carousel-slide"><img src="assets/Lara.jpg" alt="Foto Lara"></li>
+                        <li class="carousel-slide"><img src="assets/leticia.jpg" alt="Foto Letícia"></li>
+                    </ul>
+                </div>
+                <button class="carousel-btn next">&#10095;</button>
+            </div>
         </section>
 
+        <!-- FORMULÁRIO -->
         <div id="caixa-form">
             <form id="formulario">
-                <p>Preencha as informações abaixo para entrarmos em contato: </p>
-                <label for="name">NOME: </label>
+                <p>Preencha as informações abaixo para entrarmos em contato:</p>
+
+                <label for="name">NOME:</label>
                 <input type="text" id="name" name="name" required>
-                <label for="email">E-MAIL: </label>
+
+                <label for="email">E-MAIL:</label>
                 <input type="email" id="email" name="email" required>
-                <label for="assunto">ASSUNTO: </label>
+
+                <label for="assunto">ASSUNTO:</label>
                 <input type="text" id="assunto" name="assunto" required>
+
                 <button type="submit">ENVIAR</button>
             </form>
         </div>
@@ -213,19 +214,19 @@
 
     <p id="espaco"></p>
 
+    <!-- ===== FOOTER ===== -->
     <footer class="rodape">
-    <div class="emails">
-        <a href="mailto:kailany.silva@maisu...">Kailany Gabriely Santos da Silva</a>
-        <a href="mailto:lara.medeiros@maisu...">Lara Raffaelly Rodrigues Medeiros</a>
-        <a href="mailto:leticia.silva@maisu...">Letícia Gabrielly</a>
-    </div>
-    <div class="direitos">
-        © 2025. Todos os direitos reservados.  
-        <a href="#">Política de Privacidade</a> | 
-        <a href="#">Termos de Uso</a>
-    </div>
+        <div class="emails">
+            <a href="mailto:kailany.silva@maisu...">Kailany Gabrielly Santos da Silva</a>
+            <a href="mailto:lara.medeiros@maisu...">Lara Raffaelly Rodrigues Medeiros</a>
+            <a href="mailto:leticia.silva@maisu...">Letícia Gabrielly</a>
+        </div>
+        <div class="direitos">
+            © 2025. Todos os direitos reservados.
+            <a href="#">Política de Privacidade</a> |
+            <a href="#">Termos de Uso</a>
+        </div>
     </footer>
-
 
     <script src="inicial.js"></script>
 </body>

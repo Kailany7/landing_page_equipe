@@ -1,37 +1,53 @@
-
+/* ==========================
+   RESET E CONFIGURAÇÕES
+========================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: default;
 }
 
+a,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+label {
+    cursor: pointer;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@100;200;300;400;500;600;700&family=Source+Code+Pro:wght@200..900&display=swap');
 
 :root {
-    --text: #1f1f1f;        
-    --background: #7a6b84;  
+    --text: #1f1f1f;
+    --background: #7a6b84;
     --primary: #b8aeca;
-    --secondary: #4d4359;   
-    --accent: #c08497;  
+    --secondary: #4d4359;
+    --accent: #c08497;
+    --accent-dark: #a66b80;
+    /* adicionado p/ hover */
 }
-
 
 body {
     background-color: var(--background);
-   
+    font-family: 'IBM Plex Serif', serif;
 }
 
+/* ==========================
+   TIPOGRAFIA
+========================== */
 h2 {
     color: var(--secondary);
 }
 
-
-
-/* NAVBAR */
+/* ==========================
+   NAVBAR
+========================== */
 .barra-inicial {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     background-color: white;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
@@ -40,7 +56,6 @@ h2 {
     position: sticky;
     top: 0;
     z-index: 10;
-    flex-wrap: wrap;
 }
 
 li {
@@ -54,9 +69,9 @@ li {
     text-decoration: none;
     color: var(--secondary);
     font-weight: bold;
-    transition: color 0.3s ease, background-color 0.3s ease;
     padding: 4px 8px;
     border-radius: 6px;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 #barra-link:hover {
@@ -64,37 +79,37 @@ li {
     background-color: rgba(58, 124, 165, 0.1);
 }
 
-/* HERO SECTION */
+/* ==========================
+   HERO SECTION
+========================== */
 .hero-section {
     background-color: #ffffff;
-    color: var(--accent-dark);
     padding: 3rem 1.5rem;
     text-align: center;
     border-radius: 12px;
     max-width: 900px;
-    margin: 40px auto 0 auto;
+    margin: 40px auto 0;
     box-shadow: 0 4px 10px rgba(58, 124, 165, 0.1);
     line-height: 1.6;
+    color: var(--secondary);
 }
 
 .hero-logo {
     width: 300px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 20px;
     display: block;
 }
-
 
 .hero-section .hero-text {
     font-size: 1.125rem;
     max-width: 700px;
     margin: 0 auto;
     font-weight: 400;
-    color: var(--secondary);
 }
 
-
-
-/* CONTAINER PRINCIPAL */
+/* ==========================
+   CONTAINER PRINCIPAL
+========================== */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -107,14 +122,17 @@ li {
     color: var(--accent);
 }
 
+/* ==========================
+   CAROUSEL
+========================== */
 .carousel {
     position: relative;
     max-width: 900px;
     margin: 40px auto;
     overflow: hidden;
     border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     background: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-track {
@@ -125,10 +143,10 @@ li {
 .carousel-slide {
     min-width: 300px;
     flex-shrink: 0;
-    user-select: none;
-    border-radius: 12px;
     margin-right: 16px;
+    border-radius: 12px;
     overflow: hidden;
+    user-select: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -138,8 +156,8 @@ li {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    display: block;
     border-radius: 12px;
+    display: block;
 }
 
 .carousel-slide:hover {
@@ -156,8 +174,8 @@ li {
     color: white;
     font-size: 2.2rem;
     padding: 5px 10px;
-    cursor: pointer;
     border-radius: 50%;
+    cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: background-color 0.3s ease;
     user-select: none;
@@ -176,8 +194,9 @@ li {
     right: 15px;
 }
 
-
-/* CARDS */
+/* ==========================
+   CARDS PERFIS
+========================== */
 .perfis {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -185,17 +204,15 @@ li {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    background: white;
     border: 1px solid #ddd;
     border-radius: 16px;
     overflow: hidden;
-    background: #ffffff;
-    display: flex;
-    flex-direction: column;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
 }
-
-
 
 .card:hover {
     transform: translateY(-5px);
@@ -213,7 +230,6 @@ li {
 .topo-leticia {
     background: linear-gradient(135deg, #7427b2, #a693c9, #c5a3e0);
 }
-
 
 .topo-lara,
 .topo-kailany,
@@ -248,7 +264,7 @@ li {
     font-weight: bold;
 }
 
-/* TECNOLOGIAS COM ÍCONES */
+/* TECNOLOGIAS */
 .tecnologias {
     display: flex;
     flex-wrap: wrap;
@@ -269,21 +285,6 @@ li {
     width: 16px;
     height: 16px;
 }
-
-/*CURSOR*/
-* {
-    cursor: default;
-}
-
-a,
-button,
-input[type="button"],
-input[type="submit"],
-input[type="reset"],
-label {
-    cursor: pointer;
-}
-
 
 /* RODAPÉ DO CARD */
 .rodape {
@@ -314,49 +315,48 @@ label {
     font-weight: bold;
 }
 
-/* MODAL BIO */
+/* ==========================
+   MODAL BIO
+========================== */
 dialog {
     border: none;
-    padding: 2rem;
     border-radius: 12px;
+    padding: 2rem;
     width: 800px;
     max-width: 400%;
     text-align: center;
     top: 20%;
     left: 30%;
-
-
 }
-
 
 dialog h3 {
     margin-top: 0;
-    color: var(--background);
+    color: var(--text);
 }
 
 dialog p {
     margin: 5rem;
-
 }
 
 dialog::backdrop {
     background: rgba(0, 0, 0, 0.6);
-    /*deixa o fundo por trás do modal escuro */
 }
 
 .modal-hero {
-    background: var(--accent-dark);
+    background: var(--background);
     display: flex;
     justify-content: center;
     border-radius: 12px;
     padding: 10px;
 }
 
-/* FORMULÁRIO */
+/* ==========================
+   FORMULÁRIO
+========================== */
 #caixa-form {
     margin: 50px auto;
-    width: 900px;
     max-width: 90%;
+    width: 900px;
     padding: 2rem;
     background-color: white;
     border-radius: 20px;
@@ -374,8 +374,8 @@ dialog::backdrop {
     margin: 10px auto;
     padding: 8px;
     width: 90%;
-    border-radius: 5px;
     border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 #formulario button {
@@ -392,7 +392,9 @@ dialog::backdrop {
     background: var(--accent-dark);
 }
 
-
+/* ==========================
+   FOOTER
+========================== */
 footer.rodape {
     width: 100%;
     padding: 5px;
@@ -400,22 +402,22 @@ footer.rodape {
     font-size: 0.85rem;
     color: var(--secondary);
     display: flex;
-    flex-direction: column;   
-    align-items: center;  
+    flex-direction: column;
+    align-items: center;
 }
 
 footer.rodape .emails {
     display: flex;
-    gap: 20px;                 /* espaço entre os e-mails */
-    flex-wrap: wrap;           /* quebra em telas menores */
-    justify-content: center;   /* centraliza */
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-bottom: 10px;
 }
 
 footer.rodape .emails a {
     color: var(--accent);
     text-decoration: none;
-    font-weight: 600px;
+    font-weight: 600;
     transition: color 0.3s ease;
 }
 
@@ -425,7 +427,124 @@ footer.rodape .emails a:hover {
 }
 
 footer .direitos a {
-    color: var(--accent)
-    
-} 
+    color: var(--accent);
+}
 
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+    body {
+        font-size: 15px;
+    }
+
+    .hero-logo {
+        width: 220px;
+    }
+
+    .hero-section {
+        padding: 2rem 1rem;
+    }
+
+    .carousel-slide img {
+        height: 160px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .barra-inicial {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    li {
+        padding: 8px 12px;
+    }
+
+    .hero-logo {
+        width: 180px;
+    }
+
+    .hero-section {
+        margin: 20px auto;
+        padding: 1.5rem;
+    }
+
+    .carousel {
+        max-width: 100%;
+    }
+
+    .carousel-slide img {
+        height: 140px;
+    }
+
+    .perfis {
+        grid-template-columns: 1fr;
+    }
+
+    dialog {
+        width: 95%;
+        left: 2.5%;
+        top: 10%;
+        padding: 1rem;
+    }
+
+    #caixa-form {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    #formulario input {
+        width: 100%;
+    }
+
+    footer.rodape {
+        font-size: 0.75rem;
+        text-align: center;
+    }
+
+    footer.rodape .emails {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+    body {
+        font-size: 13px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .hero-logo {
+        width: 140px;
+    }
+
+    .carousel-slide img {
+        height: 120px;
+    }
+
+    .btn,
+    #formulario button {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+        display: block;
+    }
+}

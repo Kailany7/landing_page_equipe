@@ -23,3 +23,12 @@ openButtons.forEach(button => {
 closeBtn.addEventListener("click", () => {
     modal.close();
 });
+
+const form = document.getElementById("formulario");
+
+form.addEventListener("submit", function(event) {
+    alert("Mensagem enviada! Esperamos entrar em contato em breve.");
+    event.preventDefault();
+    form.submit();
+})
+    

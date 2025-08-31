@@ -269,6 +269,86 @@ h1{
     align-self: flex-start; /* Alinha o link à esquerda */
 }
 
+/*****contatos******/
+.contato {
+  padding: 5rem 2rem;
+  margin: 10rem;
+  background: var(--accent);
+  border-radius: 50px;
+  border-top: 6px solid var(--primary);
+  text-align: center;
+}
+
+.contato h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.contato p {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.contato-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contato-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: var(--text);
+  background: var(--background);
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: 2px solid var(--secondary);
+  transition: all 0.3s ease;
+}
+
+.contato-links a:hover {
+  color: white;
+  background: var(--primary);
+  transform: translateY(-5px);
+}
+
+.contato-links i {
+  font-size: 1.5rem;
+}
+
+
+/***rodape******/
+
+footer {
+    background-color: white;
+    opacity: 50%;
+    padding: 10px 10px;
+    justify-content: center;
+    position: static;
+    text-align: center;
+}
+
+.rodape ul {
+    list-style: none;
+}
+
+.rodape a {
+    text-decoration: none;
+    color: black;
+}
+
+.rodape a:hover {
+    text-decoration: underline;
+    color: rgb(43, 0, 255);
+}
+
 /********* Responsividade ***********/
 
 @media screen and (min-width:1200px ) and (max-width: 768px)  {

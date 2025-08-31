@@ -335,13 +335,25 @@ dialog h3 {
 }
 
 dialog p {
+    font-size: 1.2rem;
     margin: 5rem;
 }
+
 
 dialog::backdrop {
     background: rgba(0, 0, 0, 0.6);
 }
 
+#bioClose {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+}
 .modal-hero {
     background: var(--background);
     display: flex;

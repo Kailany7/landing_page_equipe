@@ -5,106 +5,132 @@
 }
 
 :root {
-    --background:rgb(215, 202, 255);
+    --background: #F6F8FA;
+    --accent: #3A7CA5;
+    --accent-dark: #2e5d79;
 }
 
 body {
-    background-color: rgb(215, 202, 255);
+    background-color: var(--background);
     padding: 40px;
+    font-family: 'Segoe UI', sans-serif;
 }
 
+/* NAVBAR */
 .barra-inicial {
     display: flex;
-    padding: 4px 450px;
-    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    background-color: white;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     height: 3rem;
-    justify-content: center;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    flex-wrap: wrap;
 }
 
 li {
     display: flex;
     justify-content: space-between;
-    padding: 4px 45px;
+    padding: 10px 30px;
+    list-style: none;
 }
 
 #barra-link {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 4px 8px;
+    border-radius: 6px;
 }
 
-/******************* perfis *******************/
+#barra-link:hover {
+    color: var(--accent);
+    background-color: rgba(58, 124, 165, 0.1);
+}
 
+
+/* CONTAINER PRINCIPAL */
 .container {
     max-width: 1100px;
     margin: 0 auto;
 }
- .title {
-    margin-bottom: 20px;
- }
 
- .perfis {
+.title {
+    margin: 40px 0 20px;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--accent);
+}
+
+/* CARDS */
+.perfis {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1rem;
- }
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
 
- .card {
-    border: 1px solid #ee8080; /*ajustar de acordo com a paleta de cores*/
-    border-radius: 12px;
+.card {
+    border: 1px solid #ddd;
+    border-radius: 16px;
     overflow: hidden;
-    background: #fff;
+    background: #ffffff;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra para profundidade */
- 
- }
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
 
- .topo-lara{
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* TOPO DOS CARDS */
+.topo-lara {
     background: linear-gradient(135deg, #c81616, #ff4d4d, #fb7f7f74);
+}
+
+.topo-kailany {
+    background: linear-gradient(135deg, #ff985d, #ff985d94, #ff985d52);
+}
+
+.topo-leticia {
+    background: linear-gradient(135deg, #9c79b8, #a693c9, #c5a3e0);
+}
+
+
+.topo-lara,
+.topo-kailany,
+.topo-leticia {
     display: flex;
     align-items: center;
-    gap:10px;
+    gap: 10px;
     padding: 1rem;
+}
 
- }
-
- .topo-kailany{
-    background: linear-gradient(135deg, #ff985d, #ff985d94,#ff985d52 );
-    display: flex;
-    align-items: center;
-    gap:10px;
-    padding: 1rem;
- }
-
- .topo-leticia{
-    background: linear-gradient(135deg, #2e7d7c, #43bab6ad, #5cfffa);
-    display: flex;
-    align-items: center;
-    gap:10px;
-    padding: 1rem;
- }
-
- .foto {
+.foto {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #ddd;
- }
+    border: 2px solid #fff;
+}
 
- .informações {
+.informações {
     padding: 1em;
- }
+}
 
- .title-tech{
-    color: #f9bbbb;
+.title-tech {
+    color: var(--accent);
     font-size: 1rem;
-    margin-bottom: 10px;
-    
- }
+    margin: 12px 0 8px;
+    font-weight: bold;
+}
 
+/* TECNOLOGIAS COM ÍCONES */
 .tecnologias {
     display: flex;
     flex-wrap: wrap;
@@ -113,34 +139,64 @@ li {
 
 .tech {
     background: #f0f0f0;
-    border-radius: 999px;
-    padding: 4px 8px;
-    font-size: 0.85rem;
-   
+    border-radius: 30px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
+.tech img {
+    width: 16px;
+    height: 16px;
+}
+
+/*CURSOR*/
+* {
+    cursor: default;
+}
+
+a,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+label {
+    cursor: pointer;
+}
+
+
+/* RODAPÉ DO CARD */
 .rodape {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem;
     border-top: 1px solid #eee;
 }
 
-button {
-    background: #7c5cff;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 8px;
-  cursor: pointer;
+.btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--accent-dark);
 }
 
 .portfolio {
-    color:#f9bbbb;
+    color: var(--accent);
     text-decoration: none;
-    
+    font-weight: bold;
 }
 
+/* MODAL BIO */
 dialog {
     border: none;
     padding: 2rem;
@@ -153,22 +209,24 @@ dialog {
 
 
 }
+
 dialog h3 {
     margin-top: 0;
-    color: #cb71fb;
+    color: var(--background);
 }
 
 dialog p {
     margin: 5rem;
-    
+
 }
 
 dialog::backdrop {
-    background: rgba(0, 0, 0, 0.6); /*deixa o fundo por trás do modal escuro */
+    background: rgba(0, 0, 0, 0.6);
+    /*deixa o fundo por trás do modal escuro */
 }
 
-.modal-hero{
-    background: #dfd6ff;
+.modal-hero {
+    background: var(--accent-dark);
     display: flex;
     justify-content: center;
     border-radius: 12px;
@@ -176,29 +234,88 @@ dialog::backdrop {
 }
 
 /* FORMULÁRIO */
-
 #caixa-form {
     margin: 50px auto;
     width: 400px;
     max-width: 90%;
     padding: 2rem;
-    background-color: #43bab6ad;
+    background-color: #d3e5f2;
     border-radius: 20px;
     text-align: center;
 }
 
-
 #formulario p {
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 #formulario input {
     display: block;
-    margin: 10px;
+    margin: 10px auto;
+    padding: 8px;
+    width: 90%;
     border-radius: 5px;
-    margin: 0 auto;
+    border: 1px solid #ccc;
 }
 
 #formulario button {
     margin-top: 20px;
+    background: var(--accent);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#formulario button:hover {
+    background: var(--accent-dark);
+}
+
+footer.rodape {
+    margin-top: 40px;
+    padding: 20px 40px;
+    background-color: #e8f0fa;
+    font-size: 0.85rem;
+    color: #444;
+    border-top: 1px solid #ccc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer.rodape .agradecimentos {
+    flex: 1 1 60%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+footer.rodape .agradecimentos p {
+    margin: 0;
+}
+
+footer.rodape .direitos {
+    flex: 1 1 35%;
+    text-align: right;
+    min-width: 250px;
+}
+
+footer.rodape a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    margin-left: 5px;
+}
+
+footer.rodape a:hover {
+    color: #2e5d79;
+    text-decoration: underline;
 }

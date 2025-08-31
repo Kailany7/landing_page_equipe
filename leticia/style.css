@@ -184,8 +184,6 @@ h1 {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   text-align: center;
-
-  /* NOVO: flex layout vertical para alinhar botão */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -216,8 +214,6 @@ h1 {
   color: var(--escuro);
   margin: 1rem 0;
   font-weight: 600;
-
-  /* NOVO: permite crescer e empurra o botão para baixo */
   flex-grow: 1;
 }
 
@@ -234,8 +230,6 @@ h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.95rem;
   transition: background 0.3s ease, transform 0.3s ease;
-
-  /* NOVO: centraliza horizontalmente */
   align-self: center;
 }
 
@@ -308,6 +302,24 @@ h1 {
 .btn-enviar:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 25px rgba(79, 70, 229, 0.3);
+}
+.voltar-container {
+  margin: 20px;
+}
+
+.btn-voltar {
+  background-color: var(--escuro);
+  color: var(--fundo);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-voltar:hover {
+  background-color: var(--primaria);
 }
 
 /* Rodapé - suavizado com toque moderno */

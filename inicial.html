@@ -12,21 +12,49 @@
 
     <header>
         <nav>
-            <ul class="barra-inicial">
-                <li><a id="barra-link" href="inicial.html" class="hyper">INÍCIO</a></li>
-                <li><a id="barra-link" href="kailany.html" class="hyper">KAILANY</a></li>
-                <li><a id="barra-link" href="lara.html" class="hyper">LARA</a></li>
-                <li><a id="barra-link" href="leticia.html" class="hyper">LETÍCIA</a></li>
-                <li><a id="barra-link" href="contatos.html" class="hyper">CONTATOS</a></li>
+            <ul id="inicio" class="barra-inicial">
+                <li><a id="barra-link" href="#inicio" class="hyper">INÍCIO</a></li>
+                <li><a id="barra-link" href="#hero" class="hyper">SOBRE</a></li>
+                <li><a id="barra-link" href="#galeria" class="hyper">GALERIA</a></li>
+                <li><a id="barra-link" href="#formulario" class="hyper">CONTATOS</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <img src="assets/LOGO.jpg" alt="Logo Tecnologia em Trio" class="hero-logo" />
+                <p class="hero-text">
+                    Somos uma equipe apaixonada por tecnologia, formada por três jovens dedicadas cursando Sistemas de
+                    Informação e interessadas em áreas que vão do desenvolvimento Front-End à gestão ágil de projetos.
+                    Unimos criatividade, inovação e colaboração para crescer juntas. Cada uma traz suas habilidades e
+                    paixões, desde programação e design até pesquisa e inovação social, construindo um ambiente de
+                    aprendizado constante e projetos que fazem a diferença.
+                </p>
+            </div>
+        </section>
+        <div class="title">
+            <h2>GALERIA</h2>
+        </div>
+        <div id="galeria" class="carousel">
+            <button class="carousel-btn prev">&#10094;</button>
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                    <li class="carousel-slide current-slide"><img src="assets/EV.jpg" alt="Foto no mulher tech"></li>
+                    <li class="carousel-slide"><img src="assets/KLL.jpg" alt="Foto trio"></li>
+                    <li class="carousel-slide"><img src="assets/Kailany.jpg" alt="Foto Kailany"></li>
+                    <li class="carousel-slide"><img src="assets/Lara.jpg" alt="Foto Lara"></li>
+                    <li class="carousel-slide"><img src="assets/leticia.jpg" alt="Foto Letícia"></li>
+                </ul>
+            </div>
+            <button class="carousel-btn next">&#10095;</button>
+        </div>
+
         <section>
             <div class="container">
                 <div class="title">
-                    <h2>Equipe</h2>
+                    <h2>EQUIPE</h2>
                 </div>
 
                 <div class="perfis">
@@ -141,7 +169,7 @@
 
                         <div class="rodape">
                             <button class="btn open-bio"> Ler bio</button>
-                            <a class="portfolio" href="Leticia.html">Portfólio</a> <!--COLOCAR LINK CERTO-->
+                            <a class="portfolio" href="leticia/index.html">Portfólio</a> <!--COLOCAR LINK CERTO-->
                         </div>
                     </article>
 

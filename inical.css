@@ -1,21 +1,36 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> lara-perfil
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+<<<<<<< HEAD
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
 :root {
-    --background: #F6F8FA;
-    --accent: #3A7CA5;
-    --accent-dark: #2e5d79;
-    --vidro: rgba(255, 255, 255, 0.65);
+    --text: #1f1f1f;        
+    --background: #7a6b84;  
+    --primary: #b8aeca;
+    --secondary: #4d4359;   
+    --accent: #c08497;  
 }
+
 
 body {
     background-color: var(--background);
-    padding: 40px;
-    font-family: 'Segoe UI', sans-serif;
+   
 }
+
+h2 {
+    color: var(--secondary);
+}
+
+
 
 /* NAVBAR */
 .barra-inicial {
@@ -30,18 +45,46 @@ body {
     top: 0;
     z-index: 10;
     flex-wrap: wrap;
+=======
+:root {
+    --background:rgb(215, 202, 255);
+}
+
+body {
+    background-color: rgb(215, 202, 255);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+.barra-inicial {
+    display: flex;
+    padding: 4px 450px;
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    height: 3rem;
+    justify-content: center;
+>>>>>>> lara-perfil
 }
 
 li {
     display: flex;
     justify-content: space-between;
+<<<<<<< HEAD
     padding: 10px 30px;
     list-style: none;
+=======
+    padding: 4px 45px;
+>>>>>>> lara-perfil
 }
 
 #barra-link {
     text-decoration: none;
-    color: black;
+<<<<<<< HEAD
+    color: var(--secondary);
     font-weight: bold;
     transition: color 0.3s ease, background-color 0.3s ease;
     padding: 4px 8px;
@@ -62,7 +105,6 @@ li {
     border-radius: 12px;
     max-width: 900px;
     margin: 40px auto 0 auto;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-shadow: 0 4px 10px rgba(58, 124, 165, 0.1);
     line-height: 1.6;
 }
@@ -79,7 +121,7 @@ li {
     max-width: 700px;
     margin: 0 auto;
     font-weight: 400;
-    color: var(--accent);
+    color: var(--secondary);
 }
 
 
@@ -104,6 +146,7 @@ li {
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    background: white;
 }
 
 .carousel-track {
@@ -184,21 +227,23 @@ li {
     transition: transform 0.3s ease;
 }
 
+
+
 .card:hover {
     transform: translateY(-5px);
 }
 
 /* TOPO DOS CARDS */
 .topo-lara {
-    background: linear-gradient(135deg, #c81616, #ff4d4d, #fb7f7f74);
+    background: linear-gradient(135deg, #b34f4f, #ff4d4d, #fb7f7f74);
 }
 
 .topo-kailany {
-    background: linear-gradient(135deg, #ff985d, #ff985d94, #ff985d52);
+    background: linear-gradient(135deg, #c5774a, #ff985d94, #ff985d52);
 }
 
 .topo-leticia {
-    background: linear-gradient(135deg, #9c79b8, #a693c9, #c5a3e0);
+    background: linear-gradient(135deg, #7427b2, #a693c9, #c5a3e0);
 }
 
 
@@ -209,6 +254,7 @@ li {
     align-items: center;
     gap: 10px;
     padding: 1rem;
+    color: var(--secondary);
 }
 
 .foto {
@@ -221,6 +267,10 @@ li {
 
 .informações {
     padding: 1em;
+}
+
+.informações p {
+    color: var(--secondary);
 }
 
 .title-tech {
@@ -310,6 +360,7 @@ dialog {
 
 }
 
+
 dialog h3 {
     margin-top: 0;
     color: var(--background);
@@ -336,12 +387,13 @@ dialog::backdrop {
 /* FORMULÁRIO */
 #caixa-form {
     margin: 50px auto;
-    width: 400px;
+    width: 900px;
     max-width: 90%;
     padding: 2rem;
-    background-color: #d3e5f2;
+    background-color: white;
     border-radius: 20px;
     text-align: center;
+    color: var(--secondary);
 }
 
 #formulario p {
@@ -372,50 +424,44 @@ dialog::backdrop {
     background: var(--accent-dark);
 }
 
+
 footer.rodape {
-    margin-top: 40px;
-    padding: 20px 40px;
-    background-color: #e8f0fa;
-    font-size: 0.85rem;
-    color: #444;
-    border-top: 1px solid #ccc;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
     width: 100%;
-    box-sizing: border-box;
-}
-
-footer.rodape .agradecimentos {
-    flex: 1 1 60%;
+    padding: 5px;
+    background-color: white;
+    font-size: 0.85rem;
+    color: var(--secondary);
     display: flex;
-    justify-content: flex-start;
-    gap: 30px;
-    flex-wrap: wrap;
+    flex-direction: column;   
+    align-items: center;  
 }
 
-footer.rodape .agradecimentos p {
-    margin: 0;
+footer.rodape .emails {
+    display: flex;
+    gap: 20px;                 /* espaço entre os e-mails */
+    flex-wrap: wrap;           /* quebra em telas menores */
+    justify-content: center;   /* centraliza */
+    margin-bottom: 10px;
 }
 
-footer.rodape .direitos {
-    flex: 1 1 35%;
-    text-align: right;
-    min-width: 250px;
-}
-
-footer.rodape a {
+footer.rodape .emails a {
     color: var(--accent);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 600px;
     transition: color 0.3s ease;
-    margin-left: 5px;
 }
 
-footer.rodape a:hover {
+footer.rodape .emails a:hover {
     color: #2e5d79;
     text-decoration: underline;
 }
+
+footer .direitos a {
+    color: var(--accent)
+    
+} 
+
+=======
+    color: rgb(0, 0, 0);
+}
+>>>>>>> lara-perfil

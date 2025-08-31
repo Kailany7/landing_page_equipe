@@ -59,7 +59,7 @@ nav {
     border: 2px solid rgb(200, 22, 22);
 }
 
-.texto {
+#sobre {
     max-width: 500px;
     margin-right: 300px;
     margin-top: 35px;
@@ -91,7 +91,7 @@ hr {
     margin-top: 60px;
 }
 
-.projetos {
+#projetos {
     display: flex;
     flex-direction: column; 
     align-items: center;    
@@ -124,11 +124,61 @@ hr {
 
 #clash, .nome {
     font-family: 'Clash Display', sans-serif;
-    color: rgb(200, 22, 22);
+    color: #c81616;
 }
 
 li, p {
     font-family: 'Author', sans-serif;
+}
+
+#contato {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    font-family: 'Clash Display', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    border-radius: 2rem;
+    max-width: 700px;
+    margin: 40px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#contato h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #c81616;
+}
+
+#contato p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.contatos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contato-link {
+  text-decoration: none;
+  background-color: #0077b5; /* cor padrão linkedin */
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.contato-link:first-child {
+  background-color: #d44638; /* cor típica de email (gmail) */
+}
+
+.contato-link:hover {
+  opacity: 0.8;
 }
 
 footer {

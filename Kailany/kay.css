@@ -1,22 +1,21 @@
-
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 :root {
-  --text: #8a8a8a;
-  --background: #eaeaea;
-  --primary: #9c6c44;
-  --secondary: #e1a072;
-  --accent: #ffc5a3;
+    --text: #8a8a8a;
+    --background: #eaeaea;
+    --primary: #9c6c44;
+    --secondary: #e1a072;
+    --accent: #ffc5a3;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    padding-top: 70px; /* espaçamento para caber o header fixo */
+    padding-top: 7px;
     line-height: 1.6;
     background: var(--background);
     color: var(--text);
@@ -24,42 +23,49 @@ body {
 }
 
 header {
-      position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: var(--accent);
-  border-bottom: 2px solid var(--secondary);
-  z-index: 1000;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-    
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--accent);
+    border-bottom: 2px solid var(--secondary);
+    z-index: 1000;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
+
 
 .nav-topo {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-
-
 }
 
-.logo{
-    color: var(--text);
-    font-size: 1.5rem
+
+.logo h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary);
 }
 
-.nav-lista ul {
+
+nav ul {
     list-style: none;
     display: flex;
     gap: 1.5rem;
 }
 
-.nav-lista ul li a {
+nav ul li a {
     text-decoration: none;
     color: var(--text);
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
+
+nav ul li a:hover {
+    color: var(--primary);
+}
+
 
 .container {
     max-width: 1100px;
@@ -67,70 +73,74 @@ header {
     padding: 0 2rem;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: var(--primary);
     margin-bottom: 1rem;
 }
 
-h1{
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
 }
 
 .hero {
 
-  display: flex;
-  justify-content: center;       
-  align-items: center;          
-  text-align: center;                     
-  padding: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10rem;
 }
 
 .hero-container {
-  max-width: 800px;              /* Limita largura do texto */
+    max-width: 800px;
+    /* Limita largura do texto */
 }
 
 
 .hero-subtitle {
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 
 
 .hero-title {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-  color: var(--primary);
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
 }
 
 .hero-title span {
-  color: #c6a998;                /* Destaque colorido no sobrenome */
+    color: #c6a998;
+    /* Destaque colorido no sobrenome */
 }
 
 /* Descrição */
 .hero-texto p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
 }
 
 /**************** sessão sobre mim*************************/
 
-.sobre-mim  {
+.sobre-mim {
     text-align: center;
     padding: 5rem;
     margin: 10rem;
     background: var(--accent);
-    border-radius: 50px; 
+    border-radius: 50px;
     border-top: 6px solid var(--primary);
 
 }
 
-.sobre-mim p{
+.sobre-mim p {
     max-width: 800px;
     margin: auto;
     font-size: 1.1rem;
@@ -140,9 +150,9 @@ h1{
 /*************** sessão das tecnologias e metodologias*****************/
 
 .skills {
-    padding: 5rem ;
+    padding: 5rem;
     margin: 10rem;
-    background-color:var(--accent);
+    background-color: var(--accent);
     border-top: 6px solid var(--primary);
     border-radius: 50px;
     text-align: center;
@@ -151,7 +161,8 @@ h1{
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /*responsividade */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /*responsividade */
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -163,19 +174,22 @@ h1{
     padding: 2rem;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     border-top: 6px solid var(--primary);
-    transition: transform 0.3s ease, box-shadow 0.2 eases; /* Utilizando animação  */
+    transition: transform 0.3s ease, box-shadow 0.2 eases;
+    /* Utilizando animação  */
 
 }
 
 .card:hover {
-    transform: translateY(-8px); /* Efeito de elevação ao passar o mouse */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+    transform: translateY(-8px);
+    /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    /* Sombra mais intensa ao passar o mouse */
 }
 
 /********* sessão experiencia e projetos ***********/
 
 .projetos {
-    padding: 5rem ;
+    padding: 5rem;
     margin: 10rem;
     background-color: var(--accent);
     border-top: 6px solid var(--primary);
@@ -187,7 +201,7 @@ h1{
 .cards-projetos {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem; 
+    gap: 2rem;
     margin-top: 3rem;
 }
 
@@ -211,38 +225,43 @@ h1{
     overflow: hidden;
     border-radius: 12px;
 }
+
 .card-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-    cursor: pointer;  
+    object-fit: cover;
+    cursor: pointer;
     transition: transform 0.3s ease;
 }
 
 .card-img img:hover {
-    transform: scale(1.05); /* zoom suave no hover */
+    transform: scale(1.05);
+    /* zoom suave no hover */
 }
 
 .card-content {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap:0.8rem;
-    flex-grow: 1; /* Faz o conteúdo crescer para preencher o espaço disponível */
+    gap: 0.8rem;
+    flex-grow: 1;
+    /* Faz o conteúdo crescer para preencher o espaço disponível */
 }
 
 .card-content p {
-    text-align: center; 
-    flex-grow: 1; 
+    text-align: center;
+    flex-grow: 1;
 
-    
+
 }
 
 .categoria {
     font-size: 2rem;
     color: var(--secondary);
-    text-transform: uppercase; /* Deixa o texto em maiúsculas */
-    letter-spacing: 1px; /* Espaçamento entre letras */ 
+    text-transform: uppercase;
+    /* Deixa o texto em maiúsculas */
+    letter-spacing: 1px;
+    /* Espaçamento entre letras */
 }
 
 .tags {
@@ -250,7 +269,7 @@ h1{
     gap: 1rem;
     flex-wrap: wrap;
     margin-top: 0.5rem;
-    
+
 }
 
 .tags span {
@@ -265,62 +284,64 @@ h1{
     text-decoration: none;
     color: var(--primary);
     font-weight: bold;
-    margin-top: auto; /* Empurra o link para o final do card */
-    align-self: flex-start; /* Alinha o link à esquerda */
+    margin-top: auto;
+    /* Empurra o link para o final do card */
+    align-self: flex-start;
+    /* Alinha o link à esquerda */
 }
 
 /*****contatos******/
 .contato {
-  padding: 5rem 2rem;
-  margin: 10rem;
-  background: var(--accent);
-  border-radius: 50px;
-  border-top: 6px solid var(--primary);
-  text-align: center;
+    padding: 5rem 2rem;
+    margin: 10rem;
+    background: var(--accent);
+    border-radius: 50px;
+    border-top: 6px solid var(--primary);
+    text-align: center;
 }
 
 .contato h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
 }
 
 .contato p {
-  max-width: 600px;
-  margin: auto;
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
 }
 
 .contato-links {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .contato-links a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  font-size: 1.2rem;
-  color: var(--text);
-  background: var(--background);
-  padding: 10px 20px;
-  border-radius: 12px;
-  border: 2px solid var(--secondary);
-  transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--text);
+    background: var(--background);
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 2px solid var(--secondary);
+    transition: all 0.3s ease;
 }
 
 .contato-links a:hover {
-  color: white;
-  background: var(--primary);
-  transform: translateY(-5px);
+    color: white;
+    background: var(--primary);
+    transform: translateY(-5px);
 }
 
 .contato-links i {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 
@@ -346,26 +367,103 @@ footer {
 
 .rodape a:hover {
     text-decoration: underline;
-    color: rgb(43, 0, 255);
+    color: rgb(43, 0, 255);
 }
 
 /********* Responsividade ***********/
 
-@media screen and (min-width:1200px ) and (max-width: 768px)  {
+/* Telas menores que 1024px (tablets) */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 4rem 1rem;
+    }
 
-    /* Deixa as seções se comportar melhor em telas menores */
-    .skills, .sobre-mim, .projetos {
-        margin: 3rem 1rem;
+    .sobre-mim,
+    .skills,
+    .projetos,
+    .contato {
+        margin: 4rem 1rem;
         padding: 2rem;
     }
 
-
-
-    .hero {
-        padding: 5rem 1rem;
+    h1 {
+        font-size: 2rem;
     }
 
+    .hero-title {
+        font-size: 2.2rem;
+    }
 }
 
+/* Telas menores que 768px (celulares) */
+@media (max-width: 768px) {
+    .nav-topo {
+        flex-direction: column;
+        gap: 1rem;
+    }
 
+    nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center;
+    }
+}
 
+.hero {
+    flex-direction: column;
+    padding: 3rem 1rem;
+}
+
+.hero-title {
+    font-size: 1.8rem;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+}
+
+.sobre-mim,
+.skills,
+.projetos,
+.contato {
+    margin: 2rem 0.5rem;
+    padding: 1.5rem;
+}
+
+.contato-links {
+    flex-direction: column;
+    gap: 1rem;
+}
+}
+
+/* Telas menores que 480px (celulares pequenos) */
+@media (max-width: 480px) {
+
+    .nav-topo {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center;
+    }
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+.hero-title {
+    font-size: 1.5rem;
+}
+
+.hero-subtitle {
+    font-size: 0.9rem;
+}
+
+.tags span {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.4rem;
+}
